@@ -2,26 +2,26 @@ require 'nokogiri'
 require 'httparty'
 
 class Scraper
-
-  web_page = HTTParty.get("https://www.azlyrics.com/lyrics/fatnick/pemex.html")
+  attr_accessor :artist_name, :song_name
+  def initalize
+    @artist_name = artist_name.downcase.gsub(" ","")
+    @song_name = song_name.downcase
+  end
+  puts "Artist name: (no symbols)"
+  @artist_name = gets.chomp.downcase.gsub(" ","")
+  puts "Song name:"
+  @song_name = gets.chomp.downcase
+  url = "https://www.azlyrics.com/lyrics/#{@artist_name}/#{@song_name}.html"
+  web_page = HTTParty.get(url)
 
   @parsed = Nokogiri::HTML(web_page)
+  if @parsed.css("div.main-page").css("div.col-xs-12.col-lg-8.text-center").children[14].nil?
+    puts "#{url}"
+    
+    puts "Wrong artist name or song name (ref above)"
+  else
+    lyrics = @parsed.css("div.main-page").css("div.col-xs-12.col-lg-8.text-center").children[14].text
+    pp lyrics
+  end
 
-  lyrics = @parsed.css("div.main-page").css("div.col-xs-12.col-lg-8.text-center").children[14].text
-  
-  # body > div.container.main-page > div > div.col-xs-12.col-lg-8.text-center > div:nth-child(8)
-
-
-
-  # lyics = @parsed.css
-  # get_attribute("content")
 end
-# attributes = [
-#                #(Attr:0x3fea8adbf920 {
-#                  name = "name",
-#                  value = "description"
-#                  }),
-#                #(Attr:0x3fea8adbf5ec {
-#                  name = "content",
-#                  value = "Tool \"Lateralus\": Black then white are all I see In my infancy. Red and yellow then came to be, Reaching out to me, Le..."
-#                  })]
