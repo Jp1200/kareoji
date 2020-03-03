@@ -1,2 +1,40 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="users.scss">
+    <title>Document</title>
+</head>
+<body>
+    <div class="App">
+        <div class="navBar">
+            <div class ="navLinks">
+            
+            
+                <a>Search</a>
+                <a>Log Out</a>
+            </div>
+        </div>
+
+        <div class="main">
+            <p class="midWords"> Welcome <%=@user.username%></p>
+        </div>
+
+        <div class="about">
+            <p class="aboutTitle">About</p>
+
+            <div class="aboutContainer">
+                <div>
+                    <p>things and stuff</p>
+                </div>
+                <div>
+                    <p>stuff and things</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
