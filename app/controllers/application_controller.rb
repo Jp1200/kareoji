@@ -1,6 +1,9 @@
 class ApplicationController < ActionController::Base
 
-    def hello
+    def home
 
+    end 
+
+    def new
     end 
 end

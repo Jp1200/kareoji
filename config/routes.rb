@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :songs
   resources :artists
 
+  get '/', to: 'application#home'
+  get '/log_in', to: 'users#log_in'
+
 
   
 
