@@ -15,9 +15,26 @@
             </div>
         </div>
 
-        <div class="main">
-            <p class="midWords"> Welcome <%=@user.username%></p>
+        <div class="main_user">
+            <p class="welcome_user"> Welcome <%=@user.username%></p>
+
+            <div class="playlists">
+                <div class="playlists_inside">
+                    <p>Playlists</p>
+                    <ul>
+                        <% @user.playlists.each do |playlist| %>
+                        <li><%= playlist.name %></li>
+                        <% end %>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
         </div>
+
+        
 
         <div class="about">
             <p class="aboutTitle">About</p>

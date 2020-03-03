@@ -6,10 +6,6 @@ class UsersController < ApplicationController
     @user = User.new
   end 
 
-  def log_in
-    @user = User.new 
-    redirect_to @user
-  end 
 
   def show
     @user = User.find(params[:id])

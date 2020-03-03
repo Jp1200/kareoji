@@ -21,22 +21,35 @@ body {
     float: right;
 }
 
-.main {
+.main_user {
     padding: 10px;
-    background-color: green;
+    background-color: whitesmoke;
     text-align: left;
-    background: url('backround2.jpg');
+    
     width: 100vw;
     height: 100vh;
     background-size: cover !important;
     background-repeat: no-repeat;
 }
 
-.midWords {
-    padding: 10;
-    padding-top: 500px;
+.welcome_user {
+    
+    padding-top: 75px;
     color: black;
     font-size: 50px;
+}
+
+.playlists {
+    
+    font-size: 40px;
+    background-color: whitesmoke;
+    width: 400px;
+    height: 500px;
+}
+
+.playlists_inside {
+    background-color: rgb(101, 145, 101);
+    font-size: 30px;
 }
 
 .aboutTitle {
