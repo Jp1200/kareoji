@@ -7,8 +7,5 @@ class ApplicationController < ActionController::Base
     def new
     end 
 
-    def log_in
-        @user = User.new 
-        
-    end 
+    
 end

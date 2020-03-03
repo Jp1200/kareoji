@@ -5,6 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Playlist.destroy_all
+Artist.destroy_all
+MusicVideo.destroy_all
+Song.destroy_all
 
 jack = User.create(username: "Jack", password: "bye")
 
@@ -17,3 +22,4 @@ on_god = Song.create(name: "On God", lyrics: "lyrics hello hello", duration: 300
 hello = Song.create(name: "Hello", lyrics: "lyrics hello bye", duration: 300, artist_id: adelle.id)
 
 MusicVideo.create(song_id: on_god.id, playlist_id: rap.id)
+MusicVideo.create(song_id: hello.id, playlist_id: rap.id)

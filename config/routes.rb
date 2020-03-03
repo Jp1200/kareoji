@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   resources :artists
 
   get '/', to: 'application#home'
-  get '/log_in', to: 'application#log_in'
+  get '/log_in', to: 'users#log_in'
+  post '/users/log_user_in', to: 'users#log_user_in'
 
 
   
