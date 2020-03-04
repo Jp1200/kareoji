@@ -21,7 +21,11 @@ class PlaylistsController < ApplicationController
   def update
   end
 
-  def delete
+  def destroy
+    @playlist = Playlist.find(params[:id])
+    @playlist.destroy
+    @user = User.find(session[:user_id])
+    redirect_to @user
   end
 
   private

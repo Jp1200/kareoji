@@ -25,7 +25,7 @@
                     <%= link_to "Create Playlist", new_playlist_path %>
                     <ul>
                         <% @user.playlists.each do |playlist| %>
-                        <li><%= link_to playlist.name, playlist_path(playlist) %></li>
+                        <li><%= link_to playlist.name, playlist_path(playlist) %> <%= button_to 'Delete', delete_playlist_path(playlist), params:{:id => playlist.id} %></li>
                         <% end %>
                         
                         

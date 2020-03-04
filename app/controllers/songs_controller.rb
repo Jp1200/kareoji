@@ -18,6 +18,18 @@ class SongsController < ApplicationController
     redirect_to @playlist
   end
 
+  def destroy
+    @song = Song.find(params[:id])
+    @musicvideo = MusicVideo.find_by(song_id: @song.id, playlist_id: session[:playlist_id])
+    if @musicvideo
+
+    @musicvideo.destroy
+    end 
+    redirect_to playlist_path(session[:playlist_id])
+  end 
+
+
+
   private 
 
   def song_params

@@ -10,7 +10,10 @@ Rails.application.routes.draw do
   get '/log_in', to: 'users#log_in'
   post '/users/log_user_in', to: 'users#log_user_in'
   post '/logout', to: 'application#logout'
-
+  post 'delete_playlist', to: 'playlists#destroy'
+  post '/delete_song', to: 'songs#destroy'
+  
+  
 
   
 

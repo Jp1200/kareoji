@@ -1,9 +1,9 @@
 
-<h1><%= @playlist.name %></h2>
-<h2>Songs:</h2>
+<h1> <%= @playlist.name %></h2>
+<h2> Songs:</h2>
 <ul>
 <% @playlist.songs.each do |song| %>
-   <li> <%= song.name %></li>
+   <li> <%= song.name %>    <%= button_to 'Delete', delete_song_path(song), params:{:id => song.id} %></li>
     <% end %>
     </ul><br>
 <%= link_to "add song", new_song_path %> <br>
