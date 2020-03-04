@@ -4,15 +4,16 @@ require 'openssl'
 require 'json'
 
 class Search
-  attr_accessor :url_s
+  attr_accessor :url_s, :search
   def initialize(url_s = 'https://deezerdevs-deezer.p.rapidapi.com/search?q=' )
     @url_s = url_s
+
   end
 
-  def search
-    puts "type search:"
-    search = gets.chomp
-    uri = URI.parse(url_s + search)
+  def search_meth
+    # puts "type search:"
+    # search = gets.chomp
+    uri = URI.parse(self.url_s + self.search)
 
 
     http = Net::HTTP.new(uri.host, uri.port)
@@ -27,8 +28,8 @@ class Search
     return JSON.parse(response.body).dig("data")[0..4]
   end
   def results
-    searchables = self.search
-    puts searchables.count
+    searchables = self.search_meth
+
     results = []
     searchables.each do |i|
       results << {i["artist"]["name"] => i["title"],i["album"]["title"] => i["album"]["cover"]}
