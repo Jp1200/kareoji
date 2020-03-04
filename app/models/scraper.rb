@@ -15,7 +15,7 @@ class Scraper < Search
   # @song_name = gets.chomp.downcase
  def get_lyrics
     results = self.results
-    
+    # ^ gives first five results based on search
     url = "https://www.azlyrics.com/lyrics/#{@artist_name}/#{@song_name}.html"
     web_page = HTTParty.get(url)
 
