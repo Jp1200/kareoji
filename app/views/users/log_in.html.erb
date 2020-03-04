@@ -5,5 +5,18 @@
 <%= f.text_field :username%>
 <%= f.label :password%>
 <%= f.text_field :password%>
-<%= f.submit%>
+<%= f.submit 'Log In'%>
 <% end %>
+
+<% if @error != nil %>
+<p><%= @error %></p>
+<% end %>
+
+<ul>
+<% if @user.errors.any? %>
+<%= pluralize(@user.errors.count, "error") %>
+<% @user.errors.full_messages.each do |msg| %>
+   <li> <%= msg %></li>
+    <% end %>
+    <% end %>
+</ul>

@@ -1,6 +1,10 @@
-<h1>Playlists#show</h1>
-<%= @playlist.name %>
+
+<h1><%= @playlist.name %></h2>
+<h2>Songs:</h2>
+<ul>
 <% @playlist.songs.each do |song| %>
-    <%= song.name %>
+   <li> <%= song.name %></li>
     <% end %>
-<%= link_to "add song", new_song_path %>
+    </ul><br>
+<%= link_to "add song", new_song_path %> <br>
+<%= link_to "Back to Profile", user_path(session[:user_id]) %>

@@ -7,3 +7,12 @@
 <%= f.text_field :password%>
 <%= f.submit%>
 <% end %>
+
+<ul>
+<% if @user.errors.any? %>
+<%= pluralize(@user.errors.count, "error") %>
+<% @user.errors.full_messages.each do |msg| %>
+   <li> <%= msg %></li>
+    <% end %>
+    <% end %>
+</ul>

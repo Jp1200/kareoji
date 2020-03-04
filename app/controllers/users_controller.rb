@@ -4,6 +4,8 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    
+
   end 
 
 
@@ -28,6 +30,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to @user
     else 
+      @error = "Wrong username or password"
       redirect_to log_in_path
     end 
 
@@ -41,7 +44,7 @@ class UsersController < ApplicationController
 
     redirect_to @user
     else 
-      render :log_in
+      render :new
     end 
   end
 
