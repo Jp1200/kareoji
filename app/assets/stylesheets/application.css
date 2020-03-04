@@ -13,3 +13,55 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+    margin: 0;
+}
+.navBar {
+    top: 0;
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    position:  fixed;
+}
+.navBar a {
+    color: white;
+    margin-left: 10px;
+}
+.navLinks {
+    margin-right: 15px;
+    margin-top: 35px;
+    float: right;
+}
+
+.main {
+    padding: 10px;
+    background-color: green;
+    text-align: center;
+    background: url('backround2.jpg');
+    width: 100vw;
+    height: 100vh;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+}
+
+.midWords {
+    padding: 10;
+   padding-top: 100px;
+    color: black;
+    font-size: 50px;
+}
+
+.aboutTitle {
+    text-align: center;
+    font-size: 30px;
+
+}
+
+.aboutContainer {
+    text-align: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10% 10% 10% 10%;
+}
