@@ -1,8 +1,46 @@
-<h1>Create Playlist</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="application.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="App">
+        <div class="navBar">
+            <div class ="navLinks">
+            <%= link_to "Sign Up", new_user_path %>
+            <%= link_to "Log In", log_in_path %>
+                
+              
+                <a>About</a>
+            </div>
+        </div>
 
-<%= form_for @playlist do |f|%>
-    <%= f.label :name%>
-    <%= f.text_field :name%>
+        <div class="main">
+        <h1 class="midWords">Create Playlist</h1>
 
-    <%= f.submit%>
-    <% end %>
+        <%= form_for @playlist do |f|%>
+            <%= f.label :name%>
+            <%= f.text_field :name%>
+        
+            <%= f.submit%>
+            <% end %>
+        </div>
+
+        <div class="about">
+            <p class="aboutTitle">About</p>
+
+            <div class="aboutContainer">
+                <div>
+                    <p>things and stuff</p>
+                </div>
+                <div>
+                    <p>stuff and things</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

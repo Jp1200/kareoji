@@ -1,8 +1,45 @@
-<h1> Add a Song</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="application.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="App">
+        <div class="navBar">
+            <div class ="navLinks">
+           
+                
+              
+                <a>About</a>
+            </div>
+        </div>
 
-<%= form_for @song do |f|%>
-<%= f.label :name%>
-<%= f.text_field :name%>
+        <div class="main">
+        <h1 class="midWords"> Add a Song</h1>
 
-<%= f.submit%>
-<% end %>
+        <%= form_for @song do |f|%>
+        <%= f.label :name%>
+        <%= f.text_field :name%>
+        
+        <%= f.submit 'Add Song'%>
+        <% end %>
+        </div>
+
+        <div class="about">
+            <p class="aboutTitle">About</p>
+
+            <div class="aboutContainer">
+                <div>
+                    <p>things and stuff</p>
+                </div>
+                <div>
+                    <p>stuff and things</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

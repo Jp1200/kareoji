@@ -1,22 +1,62 @@
-<h1> Log In </h1>
 
-<%= form_for @user, :url => url_for(:controller => 'users', :action => 'log_user_in') do |f|%>
-<%= f.label :username%>
-<%= f.text_field :username%>
-<%= f.label :password%>
-<%= f.text_field :password%>
-<%= f.submit 'Log In'%>
-<% end %>
 
-<% if @error != nil %>
-<p><%= @error %></p>
-<% end %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="application.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="App">
+        <div class="navBar">
+            <div class ="navLinks">
+            
+                
+              
+                <a>About</a>
+            </div>
+        </div>
 
-<ul>
-<% if @user.errors.any? %>
-<%= pluralize(@user.errors.count, "error") %>
-<% @user.errors.full_messages.each do |msg| %>
-   <li> <%= msg %></li>
-    <% end %>
-    <% end %>
-</ul>
+        <div class="main">
+        <h1 class="midWords"> Log In </h1>
+
+        <%= form_for @user, :url => url_for(:controller => 'users', :action => 'log_user_in') do |f|%>
+        <%= f.label :username%>
+        <%= f.text_field :username%>
+        <%= f.label :password%>
+        <%= f.text_field :password%>
+        <%= f.submit 'Log In'%>
+        <% end %>
+        
+        <% if @error != nil %>
+        <p><%= @error %></p>
+        <% end %>
+        
+        <ul>
+        <% if @user.errors.any? %>
+        <%= pluralize(@user.errors.count, "error") %>
+        <% @user.errors.full_messages.each do |msg| %>
+           <li> <%= msg %></li>
+            <% end %>
+            <% end %>
+        </ul>
+        
+        </div>
+
+        <div class="about">
+            <p class="aboutTitle">About</p>
+
+            <div class="aboutContainer">
+                <div>
+                    <p>things and stuff</p>
+                </div>
+                <div>
+                    <p>stuff and things</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

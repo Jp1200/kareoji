@@ -1,10 +1,48 @@
 
-<h1> <%= @playlist.name %></h2>
-<h2> Songs:</h2>
-<ul>
-<% @playlist.songs.each do |song| %>
-   <li> <%= song.name %>    <%= button_to 'Delete', delete_song_path(song), params:{:id => song.id} %></li>
-    <% end %>
-    </ul><br>
-<%= link_to "add song", new_song_path %> <br>
-<%= link_to "Back to Profile", user_path(session[:user_id]) %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="playlists.css.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="App">
+        <div class="navBar">
+            <div class ="navLinks">
+            <%= link_to "Back to Profile", user_path(session[:user_id]) %>
+              
+                <a>About</a>
+            </div>
+        </div>
+
+        <div class="mainPlaylist">
+            <h1 class="playlistMidWords"> <%= @playlist.name %></h2>
+            <div class="songs">
+                <h2> Songs:</h2>
+                <ul>
+                <% @playlist.songs.each do |song| %>
+                <li> <%= link_to song.name, song_path(song) %>    <%= button_to 'Delete', delete_song_path(song), params:{:id => song.id} %></li>
+                    <% end %>
+                    </ul><br>
+                <%= link_to "add song", new_song_path %> <br>
+            </div>
+        </div>
+
+        <div class="about">
+            <p class="aboutTitle">About</p>
+
+            <div class="aboutContainer">
+                <div>
+                    <p>things and stuff</p>
+                </div>
+                <div>
+                    <p>stuff and things</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
