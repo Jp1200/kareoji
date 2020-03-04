@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="users.scss">
+    <title>Document</title>
+</head>
+<body>
+    <div class="App">
+        <div class="navBar">
+            <div class ="navLinks">
+            <a>Search</a>
+            <%= button_to "Log Out", logout_path %>
+            
+                
+                
+            </div>
+        </div>
+
+        <div class="main_user">
+            <p class="welcome_user"> Welcome <%=@user.username%></p>
+
+            <div class="playlists">
+                <div class="playlists_inside">
+                    <p>Playlists</p>
+                    <%= link_to "Create Playlist", new_playlist_path %>
+                    <ul>
+                        <% @user.playlists.each do |playlist| %>
+                        <li><%= link_to playlist.name, playlist_path(playlist) %> <%= button_to 'Delete', delete_playlist_path(playlist), params:{:id => playlist.id} %></li>
+                        <% end %>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+
+            
+        </div>
+
+        
+
+        <div class="about">
+            <p class="aboutTitle">About</p>
+
+            <div class="aboutContainer">
+                <div>
+                    <p>things and stuff</p>
+                </div>
+                <div>
+                    <p>stuff and things</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+

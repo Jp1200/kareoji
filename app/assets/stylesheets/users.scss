@@ -1,0 +1,67 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+    margin: 0;
+}
+.navBar {
+    top: 0;
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    position:  fixed;
+}
+.navBar a {
+    color: white;
+    margin-left: 10px;
+}
+.navLinks {
+    margin-right: 15px;
+    margin-top: 35px;
+    float: right;
+}
+
+.main_user {
+    padding: 10px;
+    background-color: whitesmoke;
+    text-align: left;
+    
+    width: 100vw;
+    height: 100vh;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+}
+
+.welcome_user {
+    
+    padding-top: 75px;
+    color: black;
+    font-size: 50px;
+}
+
+.playlists {
+    
+    font-size: 40px;
+    background-color: whitesmoke;
+    width: 400px;
+    height: 500px;
+}
+
+.playlists_inside {
+    background-color: rgb(101, 145, 101);
+    font-size: 30px;
+}
+
+.aboutTitle {
+    text-align: center;
+    font-size: 30px;
+
+}
+
+.aboutContainer {
+    text-align: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10% 10% 10% 10%;
+}
