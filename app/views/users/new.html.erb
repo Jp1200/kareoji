@@ -10,10 +10,10 @@
     <div class="App">
         <div class="navBar">
             <div class ="navLinks">
-            
-                
-              
-                <a>About</a>
+
+
+
+                <a><%=link_to "About", about_path%></a>
             </div>
         </div>
 
@@ -27,7 +27,7 @@
         <%= f.password_field :password%>
         <%= f.submit%>
         <% end %>
-        
+
         <ul>
         <% if @user.errors.any? %>
         <%= pluralize(@user.errors.count, "error") %>

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :songs
   resources :artists
 
-
+  get '/about', to: 'application#about'
   get '/', to: 'application#home', as: 'home'
   get '/log_in', to: 'users#log_in'
   post '/users/log_user_in', to: 'users#log_user_in'
