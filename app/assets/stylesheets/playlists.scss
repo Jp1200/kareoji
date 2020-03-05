@@ -25,7 +25,8 @@ body {
     padding: 10px;
     background-color: green;
     text-align: center;
-    background: url('backround2.jpg');
+    
+    background: url('./images/caset2.jpeg');
     width: 100vw;
     height: 100vh;
     background-size: cover !important;
@@ -41,6 +42,13 @@ body {
 
 .songs {
     text-align: left;
+    background-color: whitesmoke  !important ;
+    opacity: 80%;
+    width: 500px;
+    
+    padding: 10px;
+    
+
 }
 
 .aboutTitle {
