@@ -10,9 +10,9 @@
             <div class ="navLinks">
             <a>Search</a>
             <%= button_to "Log Out", logout_path %>
-            
-                
-                
+
+
+
             </div>
         </div>
 
@@ -27,18 +27,18 @@
                         <% @user.playlists.each do |playlist| %>
                         <li><%= link_to playlist.name, playlist_path(playlist) %> <%= button_to 'Delete', delete_playlist_path(playlist), params:{:id => playlist.id} %></li>
                         <% end %>
-                        
-                        
+
+
                     </ul>
                 </div>
             </div>
 
-            
+
         </div>
 
-        
 
-        <div class="about">
+
+        <!-- <div class="about">
             <p class="aboutTitle">About</p>
 
             <div class="aboutContainer">
@@ -49,11 +49,9 @@
                     <p>stuff and things</p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </div>
 
 </body>
 </html>
-
-
