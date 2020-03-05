@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="application.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="App">
+        <div class="navBar">
+            <div class ="navLinks">
+
+
+
+                <a>About</a>
+            </div>
+        </div>
+
+        <div class="main">
+        <h1 class="midWords"> Search results: </h1>
+
+        <% @search.results.each do |i| %>
+        <%= "#{i.keys[0]}: #{i.values[0]}" %><%=button_to 'Add song', songs_path(@song), params:{:name => i.values[0], :artist_name => i.keys[0]}%><br>
+        <%end%>
+        </div>
+
+        <div class="about">
+            <p class="aboutTitle">About</p>
+
+            <div class="aboutContainer">
+                <div>
+                    <p>things and stuff</p>
+                </div>
+                <div>
+                    <p>stuff and things</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
