@@ -8,9 +8,13 @@ class SongsController < ApplicationController
   end
   def add
     @search = Search.new
-    @search.search = params[:search]
-    @song = Song.new
-    @artist = Artist.new
+    if params[:search].empty?
+      render '/songs/new'
+    else
+      @search.search = params[:search]
+      @song = Song.new
+      @artist = Artist.new
+    end
   end
 
   def show
@@ -21,8 +25,14 @@ class SongsController < ApplicationController
 
   def create
     @artist = Artist.find_or_create_by(name: params[:artist_name])
+
     lyrics  = Scraper.new(params[:artist_name],params[:name]).get_lyrics
-    @song = Song.create(name: params[:name], artist_id: @artist.id, url_album: params[:url_album], lyrics: lyrics )
+    if lyrics == 0
+      lyrics = "No Lyrics found"
+      @song = Song.create(name: params[:name], artist_id: @artist.id, url_album: params[:url_album], lyrics: lyrics )
+    else
+      @song = Song.create(name: params[:name], artist_id: @artist.id, url_album: params[:url_album], lyrics: lyrics )
+    end
     @playlist =  Playlist.find(session[:playlist_id])
     MusicVideo.create(song_id: @song.id, playlist_id: session[:playlist_id])
     redirect_to @playlist
