@@ -21,7 +21,7 @@ class SongsController < ApplicationController
 
   def create
     @artist = Artist.find_or_create_by(name: params[:artist_name])
-    @song = Song.create(name: params[:name], artist_id: @artist.id)
+    @song = Song.create(name: params[:name], artist_id: @artist.id, url_album: params[:url_album] )
     @playlist =  Playlist.find(session[:playlist_id])
     MusicVideo.create(song_id: @song.id, playlist_id: session[:playlist_id])
     redirect_to @playlist

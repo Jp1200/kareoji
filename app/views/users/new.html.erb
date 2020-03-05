@@ -19,12 +19,12 @@
 
         <div class="main">
         <h1 class="midWords"> Sign Up </h1>
-
+<div class="form">
         <%= form_for @user do |f|%>
         <%= f.label :username%>
         <%= f.text_field :username%>
         <%= f.label :password%>
-        <%= f.text_field :password%>
+        <%= f.password_field :password%>
         <%= f.submit%>
         <% end %>
         
@@ -36,6 +36,7 @@
             <% end %>
             <% end %>
         </ul>
+        </div>
         </div>
 
         <div class="about">

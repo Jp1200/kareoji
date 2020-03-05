@@ -38,17 +38,44 @@
     padding: 10px;
     background-color: green;
     text-align: center;
-    background: url('backround2.jpg');
+    background-image: url('background.jpg');
     width: 100vw;
     height: 100vh;
     background-size: cover !important;
     background-repeat: no-repeat;
+    
+}
+
+.form {
+    background-color:whitesmoke;
+    padding: 12px;
+    opacity: 80%;
+    width: 50%;
+    border-radius: 10%;
+
+    display: inline-block;
+}
+
+.img {
+    height: 35px;
+
+}
+
+
+.results {
+    background-color:whitesmoke;
+    padding: 12px;
+    opacity: ;: 90%;
+    width: 50%;
+    
+
+    display: inline-block;
 }
 
 .midWords {
     padding: 10;
-   padding-top: 200px;
-    color: black;
+   padding-top: 120px;
+    color:white;
     font-size: 50px;
 }
 
