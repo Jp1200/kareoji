@@ -22,7 +22,7 @@
                 <h2> Songs:</h2>
                 <ul>
                 <% @playlist.songs.each do |song| %>
-                <li> <%= link_to song.name, song_path(song) %>    <%= button_to 'Delete', delete_song_path(song), params:{:id => song.id} %></li>
+                <li> <img class="img" src=<%=song.url_album%>> <%= link_to song.name, song_path(song) %>, by <%= song.artist.name %>  <%= button_to 'Delete', delete_song_path(song), params:{:id => song.id} %></li>
                     <% end %>
                     </ul><br>
                 <%= link_to "add song", new_song_path %> <br>

@@ -19,27 +19,29 @@
 
         <div class="main">
         <h1 class="midWords"> Log In </h1>
+       <div class='form'>
 
-        <%= form_for @user, :url => url_for(:controller => 'users', :action => 'log_user_in') do |f|%>
-        <%= f.label :username%>
-        <%= f.text_field :username%>
-        <%= f.label :password%>
-        <%= f.text_field :password%>
-        <%= f.submit 'Log In'%>
-        <% end %>
-        
-        <% if @error != nil %>
-        <p><%= @error %></p>
-        <% end %>
-        
-        <ul>
-        <% if @user.errors.any? %>
-        <%= pluralize(@user.errors.count, "error") %>
-        <% @user.errors.full_messages.each do |msg| %>
-           <li> <%= msg %></li>
+            <%= form_for @user, :url => url_for(:controller => 'users', :action => 'log_user_in') do |f|%>
+            <%= f.label :username%>
+            <%= f.text_field :username%>
+            <%= f.label :password%>
+            <%= f.password_field :password%>
+            <%= f.submit 'Log In'%>
             <% end %>
+            
+            <% if @error != nil %>
+            <p><%= @error %></p>
             <% end %>
-        </ul>
+            
+            <ul>
+            <% if @user.errors.any? %>
+            <%= pluralize(@user.errors.count, "error") %>
+            <% @user.errors.full_messages.each do |msg| %>
+            <li> <%= msg %></li>
+                <% end %>
+                <% end %>
+            </ul>
+        </div>
         
         </div>
 

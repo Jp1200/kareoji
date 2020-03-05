@@ -17,10 +17,15 @@
 
         <div class="main">
         <h1 class="midWords"> Search results: </h1>
+        <ul>
 
-        <% @search.results.each do |i| %>
-        <%= "#{i.keys[0]}: #{i.values[0]}" %><%=button_to 'Add song', songs_path(@song), params:{:name => i.values[0], :artist_name => i.keys[0]}%><br>
-        <%end%>
+            <% @search.results.each do |i| %>
+            <li class="results"><%= "#{i.keys[0]}: #{i.values[0]}" %><%=button_to 'Add song', songs_path(@song), params:{:name => i.values[0], :artist_name => i.keys[0], :url_album => i.values[1]}%></li><br>
+           
+            <%end%>
+            <p class="results"><%= link_to 'Search', '/songs/new'%></p>
+            
+            </ul>
         </div>
 
         <div class="about">
