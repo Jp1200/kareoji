@@ -5,8 +5,8 @@ require 'json'
 
 class Search
   attr_accessor :url_s, :search
-  def initialize(url_s = 'https://deezerdevs-deezer.p.rapidapi.com/search?q=' )
-    @url_s = url_s
+  def initialize
+    @url_s = 'https://deezerdevs-deezer.p.rapidapi.com/search?q=' 
 
   end
 
