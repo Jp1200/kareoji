@@ -15,6 +15,12 @@ class SongsController < ApplicationController
 
   def show
     @song = Song.find(params[:id])
+    Emoji.create_translations("app/assets/stylesheets/emojihex.rtf")
+    @lyrics = Emoji.translate(@song.lyrics)
+    yt = YtScraper.new(@song.artist.name,@song.name)
+
+    @video_id = yt.get_id
+
 
   end
 
