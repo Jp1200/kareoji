@@ -25,11 +25,15 @@ class Scraper < Search
 
       puts "Wrong artist name or song name (ref above)"
     else
-      lyrics = @parsed.css("div.main-page").css("div.col-xs-12.col-lg-8.text-center").children[14].text
-
+      lyrics = @parsed.css("div.main-page").css("div.col-xs-12.col-lg-8.text-center").css("div").collect do |e|
+         if e["class"]  == nil
+           e.text
+         end
+       end
+      # .children[14]
 
     end
-    return lyrics.to_s
+    return lyrics.delete_if { |e| e == nil  }[0]
   end
 
 end
