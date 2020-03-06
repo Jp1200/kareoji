@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+Kareoiji is a webapp where a user can create playlists, and look up songs where the lyrics will turn to emojis. The song show page will also show a user a youtube music video. 
 
-* System dependencies
+  ### Instructions
+  Once the app is initialized, a user can do the following things:
+  
 
-* Configuration
+  ## How to install & play
+    Run 'bundle install'
+    Run 'rails db:migrate'
+    Run 'rails s'
+    Type 'localhost:3000' on your browser.
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+
