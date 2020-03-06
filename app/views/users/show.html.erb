@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8"> 
     <link rel="stylesheet" href="users.scss">
     <title>Document</title>
 </head>
@@ -8,8 +9,13 @@
     <div class="App">
         <div class="navBar">
             <div class ="navLinks">
+
+
+           
+
             <a>Logged in as <%= @user.username%></a>
             <a class="logout"><%= button_to "Log Out", logout_path %></a>
+
 
 
 
@@ -38,7 +44,7 @@
 
 
 
-        
+
 
     </div>
 
