@@ -43,15 +43,15 @@ body {
 .songs {
 
     text-align: left;
-    background-color: whitesmoke  !important ;
+    background-color: whitesmoke;
     opacity: 80%;
     width: 500px;
     
     padding: 10px;
 }
 
-.songs:songs {
-    
+.songs:hover {
+    background-color: rgb(204, 212, 192) !important;
 }
 
 .aboutTitle {

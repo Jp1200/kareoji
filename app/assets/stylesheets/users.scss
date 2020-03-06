@@ -32,6 +32,8 @@ body {
     background-repeat: no-repeat;
 }
 
+
+
 .welcome_user {
     
     padding-top: 75px;
@@ -39,8 +41,8 @@ body {
     font-size: 50px;
 }
 
-.playlists {
-    
+.playlists:hover {
+    background-color: rgb(240, 245, 235);
     font-size: 40px;
     
     width: 400px;
