@@ -9,21 +9,23 @@
         <div class="navBar">
             <div class ="navLinks">
 
-
-
+        
+            <a>Logged in as <%= @user.username%></a>
                 <a> <%=link_to "About", about_path %> </a>
             </div>
         </div>
 
         <div class="main">
-        <h1 class="midWords">Create Playlist</h1>
+            <h1 class="midWords">Create Playlist</h1>
+            <div class='form'>
+                <%= form_for @playlist do |f|%>
+                    <%= f.label :name%>
+                    <%= f.text_field :name%>
 
-        <%= form_for @playlist do |f|%>
-            <%= f.label :name%>
-            <%= f.text_field :name%>
-
-            <%= f.submit%>
-            <% end %>
+                    <%= f.submit%>
+                    <% end %>
+            </div>
+                  
         </div>
 
         <div class="about">
