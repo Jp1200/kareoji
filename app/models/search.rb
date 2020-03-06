@@ -25,8 +25,12 @@ class Search
     request["x-rapidapi-host"] = 'deezerdevs-deezer.p.rapidapi.com'
     request["x-rapidapi-key"] = '5205c32fa5mshca9ad07b3dd74ccp18bbedjsnb96ddfde337e'
 
-    response = http.request(request)
-    return JSON.parse(response.body).dig("data")[0..4]
+     response = http.request(request)
+     if JSON.parse(response.body).empty?
+       return []
+     else
+       return JSON.parse(response.body).dig("data")[0..4]
+     end
   end
   def results
     searchables = self.search_meth
