@@ -55,7 +55,7 @@ class Emoji
           end
       end
     end
-    return arr.join("\n")
+    return arr.join(" ")
   end
 
   def self.all
