@@ -3,11 +3,13 @@ class PlaylistsController < ApplicationController
   end
 
   def show
+    @user = User.find(session[:user_id])
     @playlist = Playlist.find(params[:id])
     session[:playlist_id] = @playlist.id
   end
 
   def new 
+    @user = User.find(session[:user_id])
     @playlist = Playlist.new
   end 
 

@@ -10,6 +10,7 @@
     <div class="App">
         <div class="navBar">
             <div class ="navLinks">
+            <a>Logged in as <%= @user.username%></a>
             <%= link_to "Back to Profile", user_path(session[:user_id]) %>
             <%= link_to "About", about_path %>
               
