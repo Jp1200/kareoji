@@ -37,8 +37,8 @@ class Emoji
       Emoji.all.each do |e|
           e.keys.each do |k|
 
-            if k == w
-              arr[i] = e.hex 
+            if k == w.downcase
+              arr[i] = e.hex
             end
           end
       end
