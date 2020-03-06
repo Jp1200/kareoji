@@ -36,14 +36,26 @@ class Emoji
     arr.each_with_index do |w,i|
       Emoji.all.each do |e|
           e.keys.each do |k|
-
-            if k == w
-              arr[i] = e.hex 
+            # if e.priority.to_i>=1
+            #   # if k && k.include?("-")
+            #   #     arr[i] = l.downcase.gsub(k,e.hex)
+            #   #     arr[i] = l.downcase.gsub(k.gsub("-", ""),e.hex)
+            #   #     arr[i] = l.downcase.gsub(k.gsub("-", " "),e.hex)
+            #   # elsif k
+            #         arr[i] = l.downcase.gsub("#{k}","#{e.hex}")
+            #   # end
+            # else
+            if w.downcase == k
+              arr[i] = e.hex
             end
+
+
+
+            # end
           end
       end
     end
-    return arr.join(" ")
+    return arr.join("\n")
   end
 
   def self.all
