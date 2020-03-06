@@ -47,6 +47,20 @@ class Emoji
             # else
             if w.downcase == k
               arr[i] = e.hex
+            elsif k && w.downcase == k+","
+              arr[i] = e.hex+","
+            elsif k && w.downcase == k+"!"
+              arr[i] = e.hex+"!"
+            elsif k && w.downcase == k+"?"
+              arr[i] = e.hex+"?"
+            elsif k && w.downcase == k+"."
+              arr[i] = e.hex+"."
+            elsif k && w.downcase == k+")"
+              arr[i] = e.hex+","
+            elsif k && w.downcase == "("+k
+              arr[i] = "("+e.hex
+            elseif k && w.downcase == "("+k+")"
+              arr[i] = "("+e.hex+")"
             end
 
 
