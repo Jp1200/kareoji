@@ -36,19 +36,22 @@ body {
 .playlistMidWords {
     padding: 10;
    padding-top: 200px;
-    color: black;
+    color:white;
     font-size: 50px;
 }
 
 .songs {
+
     text-align: left;
-    background-color: whitesmoke  !important ;
+    background-color: whitesmoke;
     opacity: 80%;
     width: 500px;
     
     padding: 10px;
-    
+}
 
+.songs:hover {
+    background-color: rgb(204, 212, 192) !important;
 }
 
 .aboutTitle {
