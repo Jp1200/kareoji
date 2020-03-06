@@ -18,6 +18,7 @@
  body {
    background-color: black
     margin: 0;
+    color: whitesmoke
 }
 .navBar {
     top: 0;
@@ -53,10 +54,11 @@
     padding: 12px;
     opacity: 80%;
     width: 50%;
-    
+
 
     display: inline-block;
 }
+
 
 .img {
     height: 35px;
@@ -79,6 +81,13 @@
    padding-top: 120px;
     color:white;
     font-size: 50px;
+}
+.aboutText {
+  color:whitesmoke;
+  /* background-color: whitesmoke; */
+  padding: 12px;
+  opacity: 80%;
+
 }
 
 .aboutTitle {
