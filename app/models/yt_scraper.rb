@@ -19,7 +19,7 @@ class YtScraper
 
   @parsed = Nokogiri::HTML(web_page)
   ref = @parsed.css("a").collect{|link| link["href"]}.select{|href| href && href.include?("/watch?v=")}.uniq[0]
-  return ref.gsub("/watch?v=", "")
+  return ref.gsub("/watch?v=", "") unless !ref
   end
 
 end
