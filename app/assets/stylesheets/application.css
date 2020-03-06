@@ -18,7 +18,7 @@
  body {
    background-color: black
     margin: 0;
-    color: blue
+    color: blue;
 }
 .navBar {
     top: 0;
@@ -39,7 +39,7 @@
 
 .main {
     padding: 10px;
-    background-color: black;
+    
     text-align: center;
     background-image: url('background.jpg');
     width: 100vw;
@@ -83,7 +83,7 @@
     font-size: 50px;
 }
 .aboutText {
-  color:whitesmoke;
+  color: white;
   /* background-color: whitesmoke; */
   padding: 12px;
   opacity: 80%;
